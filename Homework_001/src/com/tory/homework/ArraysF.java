@@ -47,6 +47,7 @@ public class ArraysF {
 		float avg = 0f;
 		int totalSum = 0;
 		float totalAvg = 0f;
+		
 		for (int i = 0; i < std; i++) {
 			sum = kors[i] + engs[i] + maths[i];
 			avg = (float) sum / 3;
