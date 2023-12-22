@@ -1,4 +1,7 @@
 package com.tory.homework2;
+
+import java.util.Scanner;
+
 /*
  * Math.random() method 를 사용하여 1 부터 10까지 임의의 수를 하나 생성
  * Scanner 를 사용하여 키보드로 부터 정수 1부터 10까지 값을 입력받기
@@ -9,5 +12,28 @@ package com.tory.homework2;
  */
 
 public class KeyboardB {
+
+	public static void main(String[] args) {
+		int rndNum = (int) (Math.random() * 10);
+
+		Scanner scan = new Scanner(System.in);
+		while (true) {
+			System.out.print("정수 >> ");
+			String str = scan.nextLine();
+			int intStr = Integer.valueOf(str);
+			
+			if(intStr == rndNum) {
+				System.out.println("참 잘했어요 ! " + rndNum);
+				break;
+			}
+			if(intStr > rndNum) {
+				System.out.println("값이 너무 커요");
+				continue;
+			}else {
+				System.out.println("값이 너무 작아요");
+				continue;
+			}
+		}
+	}
 
 }
